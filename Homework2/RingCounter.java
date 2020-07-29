@@ -1,11 +1,19 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class RingCounter {
 
     public static void main(String[] args){
 
-        int numBits = 12;
-        int numCount = 19;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("numBit 입력 : ");
+        int numBits = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("numCount 입력 : ");
+        int numCount = scanner.nextInt();
+
 
         System.out.printf("0b%s\n", Integer.toBinaryString(1 << numCount % numBits));
 
