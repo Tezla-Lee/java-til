@@ -68,22 +68,41 @@ public class ThreeSixNineAdvanced {
             if (numClap == 0 && numFoot == 0) {
                 System.out.print(i);
             } else {
-                if (numClap + numFoot < 3 || numClap == 3 || numFoot == 3) {
-                    for (int j =0; j < numClap; j++){
+                while (numClap > 0 || numFoot > 0){
+                    if (numClap > numFoot) {
                         System.out.print("짝!");
-                    }
-                    for (int j =0; j < numFoot; j++){
+                        numClap--;
+                        if (numFoot > 0) {
+                            System.out.print("쿵!");
+                            numFoot--;
+                        }
+                    } else if (numFoot >= numClap) {
                         System.out.print("쿵!");
-                    }
-                } else {
-                    if (numClap == 1) {
-                        System.out.print("쿵!짝!쿵");
-                    } else {
-                        System.out.print("짝!쿵!짝");
+                        numFoot--;
+                        if (numClap > 0) {
+                            System.out.print("짝!");
+                            numClap--;
+                        }
                     }
                 }
+                System.out.print(i);
             }
             System.out.println();
         }
     }
 }
+
+//if (numClap + numFoot < 3 || numClap == 3 || numFoot == 3) {
+//                    for (int j =0; j < numClap; j++){
+//                        System.out.print("짝!");
+//                    }
+//                    for (int j =0; j < numFoot; j++){
+//                        System.out.print("쿵!");
+//                    }
+//                } else {
+//                    if (numClap == 1) {
+//                        System.out.print("쿵!짝!쿵");
+//                    } else {
+//                        System.out.print("짝!쿵!짝");
+//                    }
+//                }
