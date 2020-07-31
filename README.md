@@ -1,5 +1,4 @@
-# Homework #1
-오늘 배운 것 (TIL)
+# 오늘 배운 것 (TIL)
 ## Data Type
 - Byte
 - Short
