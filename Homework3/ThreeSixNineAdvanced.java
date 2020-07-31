@@ -85,7 +85,7 @@ public class ThreeSixNineAdvanced {
                         }
                     }
                 }
-                System.out.print(i);
+//                System.out.print(i);
             }
             System.out.println();
         }
