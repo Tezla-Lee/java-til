@@ -17,10 +17,12 @@ package day6;
  */
 public class MyMath {
 
+    private MyMath() {}
+
     static double PI = 3.1416927;
     static double E = 2.718281;
 
-    private static int min(int...params) {
+    static int min(int...params) {
         int min = 0;
         for (int value : params) {
             min = min < value ? min : value;
@@ -28,7 +30,7 @@ public class MyMath {
         return min;
     }
 
-    private static double min(double...params) {
+    static double min(double...params) {
         double min = 0;
         for (double value : params) {
             min = min < value ? min : value;
@@ -36,7 +38,7 @@ public class MyMath {
         return min;
     }
 
-    private static int max(int...params) {
+    static int max(int... params) {
         int max = 0;
         for (int value : params) {
             max = max > value ? max : value;
@@ -44,7 +46,7 @@ public class MyMath {
         return max;
     }
 
-    private static double max(double...params) {
+    static double max(double...params) {
         double max = 0;
         for (double value : params) {
             max = max > value ? max : value;
@@ -52,24 +54,32 @@ public class MyMath {
         return max;
     }
 
-    private static int abs(int x) {
+    static int abs(int x) {
         return Math.abs(x);
     }
 
-    private static double abs(double x) {
+    static double abs(double x) {
         return Math.abs(x);
     }
 
-    private static double floor(double x) {
+    static double floor(double x) {
         return Math.floor(x);
     }
 
-    private static  double ceil(double x) {
+    static  double ceil(double x) {
         return Math.ceil(x);
     }
 }
 
 class MyMathTest {
     public static void main(String[] args) {
+        System.out.println(MyMath.PI);
+        System.out.println(MyMath.E);
+        System.out.println(MyMath.min(2, 3, -4, 6));
+        System.out.println(MyMath.max(7, 0, 6, 16, -4));
+        System.out.println(MyMath.abs(5));
+        System.out.println(MyMath.abs(-2.3));
+        System.out.println(MyMath.floor(-1.5232));
+        System.out.println(MyMath.ceil(4.6452));
     }
 }
