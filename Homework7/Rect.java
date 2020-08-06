@@ -66,7 +66,7 @@ public class Rect extends RectCore {
         float w2 = w;
         float h2 = h;
         pos.x = -y2 + pivot.x + pivot.y;
-        pos.y = x2 - pivot.x + pivot.y;
+        pos.y = x2 - pivot.x + pivot.y - w;
         w = h2;
         h = w2;
     }
@@ -84,6 +84,7 @@ class RectTest {
         System.out.println("All Points: " + Arrays.toString(rect.getAllPoints()));
 
         rect.rot90(new Vector2D(0.4f, 0.2f));
+
         System.out.println("Rotated rect: " + rect);
     }
 }
